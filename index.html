@@ -11,16 +11,17 @@
 <body>
     <div class="flex-container">
         <div class="title"><h1>Sketch Pad!</h1></div>
+        <div class="mode">Mode: Coloring.</div>
         <div class="content">
             <div class="board"></div>
             <div class="buttons">
-                <button>Black</button>
-                <button>White</button>
-                <button>Random</button>
-                <button>Reset</button>
+                <button onclick="changeColor('black')" class="blackButton">Black</button>
+                <button onclick="changeColor('white')" class="eraserButton">Eraser</button>
+                <button onclick="changeColor('random')" class="randomButton">Random</button>
+                <button onclick="resetBoard()" class="resetButton">Reset</button>
             </div>
             <div>
-                <input type="text" placeholder="Size of Board" value ="16"/>
+                <input type="text" placeholder="Size of Board" value ="16" onchange="changeSize(this.value)"/>
                 <button>Set Size</button>
             </div>
         </div>
